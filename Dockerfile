@@ -9,7 +9,6 @@ RUN npm install --production
 COPY . .
 
 EXPOSE 5000
-HOST 0.0.0.0
 
 RUN npm build
 
