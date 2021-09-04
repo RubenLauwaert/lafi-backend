@@ -8,9 +8,9 @@ dotenv.config()
 
 export function port(): string {
     if(process.env.NODE_ENV === 'PROD'){
-        return process.env.PORT_PROD as string
+        return process.env.PORT as string
     }else{
-        return process.env.PORT_DEV as string
+        return process.env.PORT as string
     }
 }
 

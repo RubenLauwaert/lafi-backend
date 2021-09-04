@@ -1,4 +1,4 @@
-FROM node:14
+FROM node
 
 WORKDIR /app
 
@@ -8,7 +8,7 @@ RUN npm install --production
 
 COPY . .
 
-EXPOSE 8080 5000
+EXPOSE 5000
 
 RUN npm build
 
