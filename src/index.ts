@@ -18,10 +18,10 @@ mongoose.connect(mongoDbUri(), () => console.log(`Succesfully connected to Mongo
 app.use(express.json())
 
 // Routes Middleware
-app.use('/api/user', authRouter)
-app.use('/api/user/assets', assetsRouter)
-app.use('/api/user/celsius', celsiusRouter)
-app.use('/api/user/cbpro', cbProRouter)
+app.use('/', authRouter)
+app.use('/assets', assetsRouter)
+app.use('/celsius', celsiusRouter)
+app.use('/cbpro', cbProRouter)
 
 
 // Listen 
