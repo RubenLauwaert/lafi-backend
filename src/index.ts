@@ -2,6 +2,7 @@ import express from 'express'
 import mongoose from 'mongoose';
 import { mongoDbUri, port } from './config/config';
 import authRouter from './routes/auth'
+import cors from 'cors'
 import assetsRouter from './routes/private/assets'
 import celsiusRouter from './routes/private/celsius'
 import cbProRouter from './routes/private/cbpro'
@@ -16,6 +17,10 @@ mongoose.connect(mongoDbUri(), () => console.log(`Succesfully connected to Mongo
 
 // Middleware
 app.use(express.json())
+
+app.use(cors({
+    origin: '*'
+}))
 
 // Routes Middleware
 app.use('/', authRouter)
